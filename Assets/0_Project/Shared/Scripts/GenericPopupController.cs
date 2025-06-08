@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SettingsPopupController : MonoBehaviour
+public class GenericPopupController : MonoBehaviour
 {
 
     [SerializeField] private Animator animator;
