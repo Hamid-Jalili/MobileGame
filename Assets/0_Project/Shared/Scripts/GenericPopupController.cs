@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class GenericPopupController : MonoBehaviour
@@ -16,5 +17,10 @@ public class GenericPopupController : MonoBehaviour
     public void OnClosedAnimationCompleted()
     {
         gameObject.SetActive(false);
+    }
+
+    void OnDisable()
+    {
+        transform.DOKill(); // Prevent memory leak from hanging tweens
     }
 }
